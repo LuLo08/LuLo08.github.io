@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tu Nombre — Portafolio</title>
+  <meta name="description" content="Portafolio personal — Proyectos, experiencia y contacto." />
+
+  <!-- Tailwind CDN (útil para prototipos). Para producción, compilar Tailwind es mejor. -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Estilos adicionales simples */
+    :root{--accent:#06b6d4}
+    .glass{background:rgba(255,255,255,0.6);backdrop-filter:blur(6px)}
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased">
+  <!-- NAV -->
+  <header class="sticky top-0 z-50 bg-white/60 backdrop-blur-sm border-b">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3 font-semibold text-lg">
+        <span class="w-10 h-10 rounded-lg bg-gradient-to-br from-sky-400 to-cyan-500 flex items-center justify-center text-white">TN</span>
+        <span>Tu Nombre</span>
+      </a>
+      <nav class="hidden md:flex gap-6 items-center text-sm">
+        <a href="#sobre" class="hover:underline">Sobre mí</a>
+        <a href="#proyectos" class="hover:underline">Proyectos</a>
+        <a href="#habilidades" class="hover:underline">Habilidades</a>
+        <a href="#contacto" class="hover:underline">Contacto</a>
+      </nav>
+      <div class="md:hidden">
+        <button id="menuBtn" aria-label="abrir menú">☰</button>
+      </div>
+    </div>
+    <!-- Mobile menu (hidden por defecto) -->
+    <div id="mobileMenu" class="hidden md:hidden border-t">
+      <div class="px-6 py-4 flex flex-col gap-3">
+        <a href="#sobre">Sobre mí</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main class="max-w-6xl mx-auto px-6 py-12">
+    <section class="grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <p class="text-sm uppercase tracking-wide text-slate-500">Hola, soy</p>
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mt-2">Tu Nombre
+          <span class="block text-xl font-medium text-slate-600 mt-2">Diseñador / Desarrollador / Creador</span>
+        </h1>
+        <p class="mt-6 text-gray-600">Soy un profesional que construye experiencias digitales centradas en el usuario. Aquí encontrarás mis proyectos más destacados, habilidades y cómo contactarme.</p>
+        <div class="mt-8 flex gap-4">
+          <a href="#proyectos" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-sky-500 text-white font-medium">Ver proyectos</a>
+          <a href="#contacto" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border">Contactar</a>
+        </div>
+      </div>
+      <div class="flex justify-center">
+        <div class="w-full max-w-md bg-white rounded-2xl p-6 shadow-lg glass">
+          <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Foto" class="w-32 h-32 rounded-full mx-auto object-cover">
+          <h3 class="text-center mt-4 font-semibold">Tu Nombre</h3>
+          <p class="text-center text-sm text-slate-600 mt-1">Breve descriptor — e.g. Frontend Developer & UX Enthusiast</p>
+          <div class="mt-4 grid grid-cols-3 gap-2 text-center text-xs">
+            <div>
+              <div class="text-sm font-bold">10+</div>
+              <div class="text-slate-500">Proyectos</div>
+            </div>
+            <div>
+              <div class="text-sm font-bold">5</div>
+              <div class="text-slate-500">Años</div>
+            </div>
+            <div>
+              <div class="text-sm font-bold">Freelance</div>
+              <div class="text-slate-500">Disponible</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE MÍ -->
+    <section id="sobre" class="mt-16">
+      <h2 class="text-2xl font-semibold">Sobre mí</h2>
+      <p class="mt-4 text-gray-600 max-w-3xl">Escribe aquí una introducción más larga: tu trayectoria, lo que te motiva, stack técnico o sectores donde has trabajado. Hazlo personal y directo.</p>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section id="proyectos" class="mt-12">
+      <h2 class="text-2xl font-semibold">Proyectos destacados</h2>
+      <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Proyecto 1 -->
+        <article class="bg-white rounded-lg shadow p-4">
+          <img class="h-40 w-full object-cover rounded" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Proyecto 1">
+          <h3 class="mt-4 font-semibold">Nombre Proyecto 1</h3>
+          <p class="mt-2 text-sm text-gray-600">Descripción corta del proyecto: problema, tu rol y tecnologías principales.</p>
+          <div class="mt-4 flex gap-2">
+            <a href="#" class="text-sm underline">Ver demo</a>
+            <a href="#" class="text-sm underline">Código</a>
+          </div>
+        </article>
+
+        <!-- Proyecto 2 -->
+        <article class="bg-white rounded-lg shadow p-4">
+          <img class="h-40 w-full object-cover rounded" src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Proyecto 2">
+          <h3 class="mt-4 font-semibold">Nombre Proyecto 2</h3>
+          <p class="mt-2 text-sm text-gray-600">Descripción breve del proyecto y resultados medibles si los hay.</p>
+          <div class="mt-4 flex gap-2">
+            <a href="#" class="text-sm underline">Ver demo</a>
+            <a href="#" class="text-sm underline">Código</a>
+          </div>
+        </article>
+
+        <!-- Proyecto 3 -->
+        <article class="bg-white rounded-lg shadow p-4">
+          <img class="h-40 w-full object-cover rounded" src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Proyecto 3">
+          <h3 class="mt-4 font-semibold">Nombre Proyecto 3</h3>
+          <p class="mt-2 text-sm text-gray-600">Breve explicación y tecnologías clave.</p>
+          <div class="mt-4 flex gap-2">
+            <a href="#" class="text-sm underline">Ver demo</a>
+            <a href="#" class="text-sm underline">Código</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- HABILIDADES -->
+    <section id="habilidades" class="mt-12">
+      <h2 class="text-2xl font-semibold">Habilidades</h2>
+      <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div class="bg-white p-4 rounded-lg shadow">
+          <h4 class="font-semibold">Frontend</h4>
+          <p class="text-sm text-slate-600 mt-2">HTML, CSS, JavaScript, React, Vue, Tailwind.</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow">
+          <h4 class="font-semibold">Backend & DevOps</h4>
+          <p class="text-sm text-slate-600 mt-2">Node.js, Python, APIs, Docker, CI/CD.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="mt-12 mb-20">
+      <h2 class="text-2xl font-semibold">Contacto</h2>
+      <p class="mt-4 text-gray-600">¿Tienes un proyecto en mente? Escríbeme un correo o usa el siguiente formulario.</p>
+
+      <div class="mt-6 grid md:grid-cols-2 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h3 class="font-semibold">Email</h3>
+          <p class="text-sm text-slate-600 mt-2">email@ejemplo.com</p>
+
+          <h3 class="font-semibold mt-4">Redes</h3>
+          <div class="mt-2 flex gap-3">
+            <a href="#" class="text-sm underline">GitHub</a>
+            <a href="#" class="text-sm underline">LinkedIn</a>
+            <a href="#" class="text-sm underline">Twitter</a>
+          </div>
+        </div>
+
+        <form class="bg-white p-6 rounded-lg shadow" action="mailto:email@ejemplo.com" method="post" enctype="text/plain">
+          <label class="block text-sm font-medium">Nombre</label>
+          <input class="mt-1 w-full border rounded p-2" type="text" name="name" required>
+
+          <label class="block text-sm font-medium mt-4">Email</label>
+          <input class="mt-1 w-full border rounded p-2" type="email" name="email" required>
+
+          <label class="block text-sm font-medium mt-4">Mensaje</label>
+          <textarea class="mt-1 w-full border rounded p-2" name="message" rows="4" required></textarea>
+
+          <button type="submit" class="mt-4 inline-block px-4 py-2 rounded bg-sky-500 text-white">Enviar</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t bg-white/60 backdrop-blur-sm">
+    <div class="max-w-6xl mx-auto px-6 py-6 flex justify-between items-center text-sm">
+      <div>© <span id="year"></span> Tu Nombre — Todos los derechos reservados.</div>
+      <div class="text-slate-500">Hecho con ❤️</div>
+    </div>
+  </footer>
+
+  <script>
+    // Año dinámico
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Toggle mobile menu
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn?.addEventListener('click', ()=>{
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
